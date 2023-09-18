@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
-            $table->integer('descripcion');
-            //$table->foreign('descripcion')->references('id')->on('descripcions');
+            $table->foreignId('descripcion_id')
+                ->references('id')
+                ->on('descripcions');
         });
     }
 
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('productos');
+        //
     }
 };
