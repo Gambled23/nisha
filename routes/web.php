@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\DescripcionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,7 +13,7 @@ use App\Http\Controllers\ClienteController;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| be assigned to the 'web' middleware group. Make something great!
 |
 */
 
@@ -19,3 +22,5 @@ Route::get('/', function () {
 });
 
 Route::resource('cliente', ClienteController::class);
+Route::resource('productos', ProductoController::class);
+Route::resource('descripcions', ProductoController::class);
