@@ -12,6 +12,7 @@
         <p>{{ $cliente->correo }}</p>
         <p>{{ $cliente->telefono }}</p>
         <p>{{ $cliente->direccion }}</p>
+        <br>
     @endforeach
 </body>
 </html>
