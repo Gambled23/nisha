@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre', 50);
-            $table->string('informacion', 50);
-            $table->integer('precio');
-            $table->boolean('disponible');
+        Schema::create('chambeador-_pedido', function (Blueprint $table) {
+            $table->foreignId('chambeador_id')->constrained();
+            $table->foreignId('pedido_id')->constrained();
+            $table->primary(['chambeador_id', 'pedido_id']);
+            $table->boolean('estado');
+            $table->timestamps();
         });
     }
 

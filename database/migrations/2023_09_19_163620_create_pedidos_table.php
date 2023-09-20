@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productos', function (Blueprint $table) {
+        Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 50);
-            $table->string('informacion', 50);
-            $table->integer('precio');
-            $table->boolean('disponible');
+            $table->foreignId('producto_id')->constrained();
+            $table->foreignId('cliente_id')->constrained();
+            $table->string('cantidad');
+            $table->string('total');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('pedidos');
     }
 };
