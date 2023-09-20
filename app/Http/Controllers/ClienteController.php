@@ -30,15 +30,15 @@ class ClienteController extends Controller
         $request->validate([
             'nombre' => 'required',
             'correo' => 'required|email', 
-            'num_pedido' => ['required', 'min:8', 'max:10'],
             'telefono' => ['required', 'min:10', 'max:12'],
+            'direccion' => ['required', 'min:10', 'max:50'],
         ]);
 
         $cliente = new Cliente();
         $cliente -> nombre = $request->nombre;
         $cliente -> correo = $request->correo;
-        $cliente -> num_pedido= $request->num_pedido;
-        $cliente ->  telefono= $request->telefono;
+        $cliente -> telefono= $request->telefono;
+        $cliente -> direccion = $request->direccion;
         $cliente->save();
 
         return redirect('/cliente');

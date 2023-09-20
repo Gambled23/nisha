@@ -13,10 +13,10 @@
         <input type="text" name="nombre" id="nombre"><br>
         <label for="correo">Correo</label><br>
         <input type="email" name="correo" id="correo" value="@gmail.com"><br>
-        <label for="num_pedido">Pedido</label><br>
-        <input type="text" name="num_pedido" id="num_pedido"><br>
         <label for="telefono">Telefono</label><br>
-        <input type="text" name="telefono" id="telefono"><br><br>
+        <input type="text" name="telefono" id="telefono"><br>
+        <label for="direccion">Direccion</label><br>
+        <input type="text" name="direccion" id="direccion"><br><br>
         <input type="submit" value="Enviar">
     </form>
 </body>
