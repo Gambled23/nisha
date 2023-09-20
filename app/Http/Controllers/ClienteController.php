@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Cliente;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -11,7 +12,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('Cliente/indexCliente');
+        $clientes = Cliente::all();
+        
+        return view('Cliente/indexCliente', ['clientes' => $clientes]);
     }
 
     /**

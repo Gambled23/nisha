@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LISTADO DE NORMAS<h1>
+    <h1>LISTADO DE NORMAS xd<h1>
+    @foreach ($clientes as $cliente)
+        <p>{{ $cliente->nombre }}</p>
+        <p>{{ $cliente->correo }}</p>
+        <p>{{ $cliente->telefono }}</p>
+        <p>{{ $cliente->direccion }}</p>
+    @endforeach
 </body>
 </html>
