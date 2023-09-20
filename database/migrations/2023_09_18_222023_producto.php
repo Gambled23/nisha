@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
-            $table->foreignId('descripcion_id')
-                ->references('id')
-                ->on('descripcions');
+            $table->string('informacion', 50);
+            $table->integer('precio');
+            $table->boolean('disponible');
         });
     }
 

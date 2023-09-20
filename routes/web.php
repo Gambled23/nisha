@@ -21,6 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('cliente', ClienteController::class);
 Route::resource('productos', ProductoController::class);
-Route::resource('descripcions', ProductoController::class);

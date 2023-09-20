@@ -7,14 +7,17 @@
 </head>
 <body>
 <h1>FORMULARIO DE CLIENTE</h1>
-    <form action="cliente" method="POST">
-        @csrf
+    <form method="POST" action="{{ route('cliente.store') }}">
+        @csrf <!--cross site resource forgery-->
         <label for="nombre">Nombre</label><br>
         <input type="text" name="nombre" id="nombre"><br>
         <label for="correo">Correo</label><br>
-        <input type="email" name="correo" id="correo"><br>
-
-
+        <input type="email" name="correo" id="correo" value="@gmail.com"><br>
+        <label for="num_pedido">Pedido</label><br>
+        <input type="text" name="num_pedido" id="num_pedido"><br>
+        <label for="telefono">Telefono</label><br>
+        <input type="text" name="telefono" id="telefono"><br><br>
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
