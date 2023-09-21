@@ -6,9 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LISTADO DE NORMAS xd<h1>
-    @foreach ($clientes as $cliente)
-        <p>{{ $cliente->nombre }}</p>
+    <table class="table-auto">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                @foreach ($clientes as $cliente)
+                <td>{{ $cliente->nombre }}</td>
         <p>{{ $cliente->correo }}</p>
         <p>{{ $cliente->telefono }}</p>
         <p>{{ $cliente->direccion }}</p>
