@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('informacion', 50);
             $table->integer('precio');
             $table->boolean('disponible');
+            $table->timestamps();
         });
     }
 

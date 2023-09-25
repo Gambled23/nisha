@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,9 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $producto = Producto::all();
+
+        return view('Producto/indexProducto', ['productos' => $producto]);
     }
 
     /**
@@ -20,7 +22,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('Producto/createProducto');
     }
 
     /**
@@ -28,7 +30,21 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => ['required', 'min:10', 'max:50'],
+            'informacion' => ['required', 'min:10', 'max:50'], 
+            'precio' => 'required|numeric', 
+            'disponible' => 'required|boolean'
+        ]);
+
+        $producto = new Producto();
+        $producto -> nombre = $request->nombre;
+        $producto -> informacion = $request->informacion;
+        $producto -> precio= $request->precio;
+        $producto -> disponible = $request->disponible;
+        $producto->save();
+
+        return redirect('/productos');
     }
 
     /**
