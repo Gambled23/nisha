@@ -21,6 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//Route::get('producto/pdf', ProductoController::class, 'pdf')->name('producto.pdf'); renombrar rutas de forma manual
 Route::resource('cliente', ClienteController::class);
 Route::resource('productos', ProductoController::class);
