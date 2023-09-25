@@ -25,9 +25,9 @@
                 </div>
                 <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="disponible">Disponible</label>
-                    <input type="radio" name="disponible" value="si">
+                    <input type="radio" name="disponible" value="1" id="si_disponible">
                     <label for="disponible"> Sí </label> <br>
-                    <input type="radio" name="no_disponible" value="no">
+                    <input type="radio" name="disponible" value="0" id="no_disponible" checked>
                     <label for="no_disponible"> No </label> <br>
                 </div>
                 <div class="mb-4">
