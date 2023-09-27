@@ -90,6 +90,7 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //tmb esto mañana toca jej
+        $producto->delete();
+        return redirect('/productos');
     }
 }
