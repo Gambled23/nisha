@@ -60,7 +60,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('Producto/editProducto', compact('producto'));  
     }
 
     /**
@@ -68,7 +68,21 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        $request->validate([
+            'nombre' => ['required', 'min:2', 'max:50'],
+            'informacion' => ['required', 'min:5', 'max:50'], 
+            'precio' => 'required|numeric', 
+            'disponible' => 'required|boolean'
+        ]);
+
+        $producto = new Producto();
+        $producto -> nombre = $request->nombre;
+        $producto -> informacion = $request->informacion;
+        $producto -> precio= $request->precio;
+        $producto -> disponible = $request->disponible;
+        $producto->save();
+
+        return redirect('/productos');
     }
 
     /**
@@ -76,6 +90,6 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        //tmb esto mañana toca jej
     }
 }

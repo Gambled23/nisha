@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    @vite('resources/css/app.css')
+    <title>Show</title>
 </head>
 <body>
 <h1 class="text-center mb-10 text-2xl font-mono"><br>INFORMACIÓN EN DB</h1>
