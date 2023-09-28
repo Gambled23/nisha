@@ -28,9 +28,13 @@
                                 
                                 <td class="whitespace-nowrap px-6 py-4 font-medium"><a href ="{{ route('productos.show', $producto)}}">{{ $producto->nombre }}</a></td> 
                                 <td class="whitespace-nowrap px-6 py-4 font-medium">{{ $producto->informacion }}</td>
-                                <td class="whitespace-nowrap px-6 py-4 font-medium">$ {{ $producto->precio }}</td>
-                                <td class="whitespace-nowrap px-6 py-4 font-medium">{{ $producto->disponible }}</td>
-                                <td class="whitespace-nowrap px-6 py-4 font-medium"> <a href ="{{ route('productos.edit', $producto)}}"> || Editar</td>
+                                <td class="whitespace-nowrap px-6 py-4 font-medium">${{ $producto->precio }}</td>
+                                @if( $producto->disponible == 1)
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium">✅</td>
+                                @else
+                                    <td class="whitespace-nowrap px-6 py-4 font-medium">❌</td>
+                                @endif
+                                <td class="whitespace-nowrap px-6 py-4 font-medium">  ||  <a href ="{{ route('productos.edit', $producto)}}">Editar</td>
                                 <td><form action="{{ route('productos.destroy', $producto )}}" method="POST">
                                     @csrf
                                     @method('DELETE')
