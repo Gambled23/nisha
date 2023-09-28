@@ -13,7 +13,7 @@
                 @csrf <!--cross site resource forgery-->
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="nombre" id="nombre" placeholder="Nombre" value="{{old('nombre')}}"> <!--old para que no se tenga que ingresar todo de nuevo-->
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="informacion">Informacion</label>

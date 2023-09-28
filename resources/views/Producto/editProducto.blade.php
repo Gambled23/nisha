@@ -14,15 +14,15 @@
                 @method('PATCH') <!--Apegado a rest-->
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="nombre" id="nombre" placeholder="Nombre" value= "{{ $producto->nombre}}">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="nombre" id="nombre" placeholder="Nombre">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="informacion">Informacion</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="informacion" id="informacion" value="{{ $producto->informacion}}" placeholder="Información" >
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="informacion" id="informacion" placeholder="Información" >
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="precio">Precio</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="precio" id="precio" placeholder="Precio" value="{{ $producto->precio}}">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="precio" id="precio" placeholder="Precio">
                 </div>
                 <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="disponible">Disponible</label>
