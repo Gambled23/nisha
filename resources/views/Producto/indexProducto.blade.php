@@ -31,6 +31,11 @@
                                 <td class="whitespace-nowrap px-6 py-4 font-medium">$ {{ $producto->precio }}</td>
                                 <td class="whitespace-nowrap px-6 py-4 font-medium">{{ $producto->disponible }}</td>
                                 <td class="whitespace-nowrap px-6 py-4 font-medium"> <a href ="{{ route('productos.edit', $producto)}}"> || Editar</td>
+                                <td><form action="{{ route('productos.destroy', $producto )}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Eliminar</button>
+                                </form></td>
                             </tr>
                         @endforeach
                         </tbody>
