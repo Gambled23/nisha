@@ -37,6 +37,7 @@ class ProductoController extends Controller
             'disponible' => 'required|boolean'
         ]);
 
+        try{
         $producto = new Producto();
         $producto -> nombre = $request->nombre;
         $producto -> informacion = $request->informacion;
@@ -45,6 +46,10 @@ class ProductoController extends Controller
         $producto->save();
 
         return redirect('/productos');
+        }
+        catch (\Exception $e){
+            return redirect()->route('productos.index');
+        }
     }
 
     /**
@@ -76,6 +81,7 @@ class ProductoController extends Controller
             'disponible' => 'required|boolean'
         ]);
 
+        try{
         $producto -> nombre = $request->nombre;
         $producto -> informacion = $request->informacion;
         $producto -> precio= $request->precio;
@@ -83,6 +89,10 @@ class ProductoController extends Controller
         $producto->save();
 
         return redirect()->route('productos.index');
+        }
+        catch (\Exception $e) {
+            return redirect()->route('productos.index'); 
+        }
     }
 
     /**
