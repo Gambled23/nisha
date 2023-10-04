@@ -24,6 +24,10 @@ Route::get('/', function () {
 //Route::get('producto/pdf', ProductoController::class, 'pdf')->name('producto.pdf'); renombrar rutas de forma manual
 Route::resource('cliente', ClienteController::class);
 Route::resource('productos', ProductoController::class);
+
+Route::get('/template', function () {
+    return view('template');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
