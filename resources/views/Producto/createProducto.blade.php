@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Producto</title>
+    <title>Nuevo producto</title>
 </head>
 <body class="flex justify-center">
     <div class="w-full max-w-xs">

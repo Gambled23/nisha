@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Clientes</title>
 </head>
 <body>
 <h1 class="text-center mb-10 text-2xl font-mono"><br>INFORMACIÓN EN DB</h1>
