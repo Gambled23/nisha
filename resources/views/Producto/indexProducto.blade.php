@@ -7,7 +7,7 @@
     <title>Productos </title>
 </head>
 <body>
-<h1 class="text-center mb-10 text-2xl font-mono"><br>INFORMACIÓN EN DB</h1>
+<h1 class="text-center mb-10 text-2xl font-mono"><br>Productos</h1>
     <button class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 mx-6 rounded"><a href="{{ route('productos.create') }}">Crear Producto</a></button><br><br>
     <div class="flex flex-col">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">

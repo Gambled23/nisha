@@ -32,7 +32,7 @@
                     <label for="no_disponible"> No </label> <br>
                 </div>
                 <div class="mb-4">
-                    <input class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Enviar">
+                    <input class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Actualizar">
                 </div>
             </form>
     </div>
