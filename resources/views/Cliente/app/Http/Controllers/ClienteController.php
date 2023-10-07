@@ -37,7 +37,6 @@ class ClienteController extends Controller
             'direccion' => ['required', 'min:10', 'max:50'],
         ]);
 
-        try {
         $cliente = new Cliente();
         $cliente -> nombre = $request->nombre;
         $cliente -> correo = $request->correo;
@@ -46,10 +45,7 @@ class ClienteController extends Controller
         $cliente->save();
 
         return redirect('/cliente');
-        }
-        catch (\Exception $e){
-            return redirect()->route('cliente.index');
-        }
+
     }
 
     /**
@@ -57,7 +53,7 @@ class ClienteController extends Controller
      */
     public function show(Cliente $cliente)
     {
-        return view('Cliente/showCliente', compact('cliente'));
+        //
     }
 
     /**
@@ -65,7 +61,7 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        return view('Cliente/editCliente', compact('cliente'));
+        //
     }
 
     /**
@@ -73,25 +69,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Cliente $cliente)
     {
-        $validated = $request->validate([
-            'nombre' => 'required',
-            'correo' => 'required|email', 
-            'telefono' => ['required', 'min:10', 'max:12'],
-            'direccion' => ['required', 'min:10', 'max:50'],
-        ]);
-
-        try{
-            $cliente -> nombre = $request->nombre;
-            $cliente -> correo = $request->correo;
-            $cliente -> telefono= $request->telefono;
-            $cliente -> direccion = $request->direccion;
-            $cliente->save();
-
-        return redirect()->route('cliente.index');
-        }
-        catch (\Exception $e) {
-            return redirect()->route('cliente.index'); 
-        }
+        //
     }
 
     /**
@@ -99,7 +77,6 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        $cliente->delete();
-        return redirect()->route('cliente.index');
+        //
     }
 }
