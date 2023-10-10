@@ -1,4 +1,3 @@
-<svg width="100px" height="40px" width="40px" viewBox="0 0 5 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<style>@keyframes jello{0%,to{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}}</style>
-<path d="M14 9V3L11 4H8L5 3V9L9.5 11L14 9ZM14 9L20 12L22 18L20 21H4L2 19L4 17L2 15L4 13M7 21V9.88889M11 15V21L16.0435 16H18M8 7L8.00707 7.00707M11 7L11.0071 7.00707" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" style="animation:jello 1s both infinite cubic-bezier(.69,.34,.09,.6);transform-origin:center"/>/>
+<svg width="100px" height="40px" width="40px" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
+<path d="M14 9V3L11 4H8L5 3V9L9.5 11L14 9ZM14 9L20 12L22 18L20 21H4L2 19L4 17L2 15L4 13M7 21V9.88889M11 15V21L16.0435 16H18M8 7L8.00707 7.00707M11 7L11.0071 7.00707" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
