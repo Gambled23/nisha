@@ -9,6 +9,17 @@
 <body class="flex justify-center">
     <div class="w-full max-w-xs">
         <h1 class="text-center mb-10 text-2xl font-mono"><br>FORMULARIO DE CLIENTE</h1>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+             </div>
+         @endif
+         
             <form method="POST" action="{{ route('cliente.update', $cliente) }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf <!--cross site resource forgery-->
                 @method('PATCH') <!--Apegado a rest-->

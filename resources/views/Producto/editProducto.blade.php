@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Editar producto</title>
+    <title>Editar</title>
 </head>
 <body class="flex justify-center">
     <div class="w-full max-w-xs">
-        <h1 class="text-center mb-10 text-2xl font-mono"><br>FORMULARIO DE PRODUCTO</h1>
+        <h1 class="text-center mb-10 text-2xl font-mono"><br>EDITAR PRODUCTO</h1>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+             </div>
+         @endif
+
             <form method="POST" action="{{ route('productos.update', $producto) }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf <!--cross site resource forgery-->
                 @method('PATCH') <!--Apegado a rest-->
