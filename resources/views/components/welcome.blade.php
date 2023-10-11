@@ -10,13 +10,13 @@
     </p>
 </div>
 
-
+<div class="full">
+    <x-photos/>
+</div>
 
 <div class="bg-gray-200 dark:bg-gray-800 bg-opacity-25 p-6 w-full">
 
-<div>
-    <x-photos/>
-</div>
+
 
 </div>
 
