@@ -10,7 +10,7 @@
     </p>
 </div>
 
-<div class="full">
+<div class="full py-4">
     <x-photos/>
 </div>
 

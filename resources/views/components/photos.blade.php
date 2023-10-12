@@ -1,6 +1,5 @@
 <!-- This is an example component -->
 <div class="max-w-2xl mx-auto">
-
 <div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
