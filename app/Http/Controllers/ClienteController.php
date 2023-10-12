@@ -31,7 +31,7 @@ class ClienteController extends Controller
     public function store(Request $request)//:RedirectResponse
     {
         $request->validate([
-            'nombre' => 'required',
+            'nombre' => ['required', 'min:2'],
             'correo' => 'required|email', 
             'telefono' => ['required', 'min:10', 'max:12'],
             'direccion' => ['required', 'min:10', 'max:50'],
@@ -74,7 +74,7 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
         $validated = $request->validate([
-            'nombre' => 'required',
+            'nombre' => ['required', 'min:2'],
             'correo' => 'required|email', 
             'telefono' => ['required', 'min:10', 'max:12'],
             'direccion' => ['required', 'min:10', 'max:50'],
