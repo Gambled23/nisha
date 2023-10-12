@@ -12,14 +12,14 @@
 
         @if ($errors->any())
             <div class="alert alert-danger">
-                <ul>
+                <ul class="mt-3 list-disc list-inside text-sm text-red-600 dark:text-red-400">
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
              </div>
          @endif
-         
+
             <form method="POST" action="{{ route('cliente.update', $cliente) }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf <!--cross site resource forgery-->
                 @method('PATCH') <!--Apegado a rest-->
