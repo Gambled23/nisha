@@ -6,6 +6,7 @@
     @vite('resources/css/app.css')
     <title>Nuevo producto</title>
 </head>
+<!--cARANZA VANESSA PÉREZ NAVARRO-->
 <body class="flex justify-center">
     <div class="w-full max-w-xs">
         <h1 class="text-center mb-10 text-2xl font-mono"><br>FORMULARIO DE PRODUCTO</h1>

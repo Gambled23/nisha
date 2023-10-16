@@ -6,6 +6,7 @@
     @vite('resources/css/app.css')
     <title>Nuevo cliente</title>
 </head>
+<!--CESAR DANIEL GONZALEZ GIRON-->
 <body class="flex justify-center">
     <div class="w-full max-w-xs">
         <h1 class="text-center mb-10 text-2xl font-mono"><br>FORMULARIO DE CLIENTE</h1>
