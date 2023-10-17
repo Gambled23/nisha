@@ -38,19 +38,8 @@ class ProductoController extends Controller
             'disponible' => 'required|boolean'
         ]);
 
-        try{
-        $producto = new Producto();
-        $producto -> nombre = $request->nombre;
-        $producto -> informacion = $request->informacion;
-        $producto -> precio= $request->precio;
-        $producto -> disponible = $request->disponible;
-        $producto->save();
-
-        return redirect('/productos');
-        }
-        catch (\Exception $e){
-            return redirect()->route('productos.index');
-        }
+        Producto::create($request->all());
+        return redirect()->route('productos.index');
     }
 
     /**
@@ -82,18 +71,8 @@ class ProductoController extends Controller
             'disponible' => 'required|boolean'
         ]);
 
-        try{
-        $producto -> nombre = $request->nombre;
-        $producto -> informacion = $request->informacion;
-        $producto -> precio= $request->precio;
-        $producto -> disponible = $request->disponible;
-        $producto->save();
-
-        return redirect()->route('productos.index');
-        }
-        catch (\Exception $e) {
-            return redirect()->route('productos.index'); 
-        }
+        Producto::where('id', $producto->id)->update($request->except('_token', '_method'));
+        return redirect()->route('productos.index'); 
     }
 
     /**
