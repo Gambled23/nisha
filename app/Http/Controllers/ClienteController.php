@@ -37,19 +37,9 @@ class ClienteController extends Controller
             'direccion' => ['required', 'min:10', 'max:50'],
         ]);
 
-        try {
-        $cliente = new Cliente();
-        $cliente -> nombre = $request->nombre;
-        $cliente -> correo = $request->correo;
-        $cliente -> telefono= $request->telefono;
-        $cliente -> direccion = $request->direccion;
-        $cliente->save();
+        Cliente::create($request->all());
 
-        return redirect('/cliente');
-        }
-        catch (\Exception $e){
             return redirect()->route('cliente.index');
-        }
     }
 
     /**
@@ -80,18 +70,9 @@ class ClienteController extends Controller
             'direccion' => ['required', 'min:10', 'max:50'],
         ]);
 
-        try{
-            $cliente -> nombre = $request->nombre;
-            $cliente -> correo = $request->correo;
-            $cliente -> telefono= $request->telefono;
-            $cliente -> direccion = $request->direccion;
-            $cliente->save();
+        Cliente::where('id', $cliente->id)->update($request->except('_token', '_method'));
 
-        return redirect()->route('cliente.index');
-        }
-        catch (\Exception $e) {
-            return redirect()->route('cliente.index'); 
-        }
+            return redirect()->route('cliente.index');
     }
 
     /**
