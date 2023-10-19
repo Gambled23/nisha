@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
     public function pedidos()
     {
-        return $this->hasMany(Pedido::class);
+        return $this->hasMany(Pedidos::class);
     }
 }
