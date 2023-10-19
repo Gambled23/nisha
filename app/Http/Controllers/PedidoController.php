@@ -13,7 +13,8 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //
+        //$pedidos = Pedido::all();
+        //return view('pedido.indexPedido', compact('pedidos'));
     }
 
     /**
@@ -31,13 +32,25 @@ class PedidoController extends Controller
     public function store(Request $request)
     {
         $pedido = new Pedido();
+        $pedido->cliente_id = $request->cliente_id;
+        $pedido->identificador = $request->identificador;
+        $pedido->total = $request->total;
+        $pedido->envio = $request->envio;
+        $pedido->terminos = $request->terminos;
+        $pedido->save();
+
+
+        /*FORMA 2 DE GUARDAR, NO JALO
+        
+        $pedido = new Pedido();
+        $pedido->identificador = $request->identificador;
         $pedido->total = $request->total;
         $pedido->envio = $request->envio;
         $pedido->terminos = $request->terminos;
 
 
         $cliente = Cliente::find($request->cliente_id);
-        $cliente->pedidos()->save($pedido);
+        $cliente->pedidos()->save($pedido); */
 
         return redirect()->route('cliente.index');
 
