@@ -13,8 +13,8 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //$pedidos = Pedido::all();
-        //return view('pedido.indexPedido', compact('pedidos'));
+        $pedidos = Pedido::all();
+        return view('pedido.indexPedido', compact('pedidos'));
     }
 
     /**
