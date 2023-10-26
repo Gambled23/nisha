@@ -31,6 +31,13 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <h2> CATEGORIAS </h2>
+                    <ul>
+                        @foreach ($producto->tags as $tag)
+                        <li>{{$tag->nombre}}</li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>

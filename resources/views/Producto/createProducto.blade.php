@@ -54,6 +54,15 @@
                     <label for="no_disponible"> No </label> <br>
                 </div>
                 <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="disponible">Categoria</label>
+                    <select name="tag_id[]" multiple>
+                        @foreach ($tags as $tag)
+                        <option value = "{{ $tag->id }}" @selected( array_search($tag->id, old('tag_id') ?? []) !== false)>
+                            {{$tag->nombre}}
+                        </option>
+                        @endforeach
+                </div>
+                <div class="mb-4">
                     <input class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Enviar">
                 </div>
             </form>

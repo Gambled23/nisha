@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\Producto;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -23,7 +24,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view('Producto/createProducto');
+        $tags = Tag::all();
+        return view('Producto/createProducto', compact('tags'));
     }
 
     /**
@@ -38,7 +40,10 @@ class ProductoController extends Controller
             'disponible' => 'required|boolean'
         ]);
 
-        Producto::create($request->all());
+
+        //Producto::create($request->all());
+        $producto = Producto::create($request->all());
+        $producto->tags()->attach($request->tag_id);
         return redirect()->route('productos.index');
     }
 
