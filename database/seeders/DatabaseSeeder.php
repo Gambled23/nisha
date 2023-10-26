@@ -12,15 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
+        //NO JALA XDD
+        //User::factory(10)->has(Norma::factory()->count(3))->create();
+        //Con la linea de codigo anteriro se facilita que por cada uno de los elementos que se
+        //creen, se agreguen relaciones dentro de esta, ya no se llmaria al seeder individual del que se estan creando las relaciones (por ejemplo si
+        //se estan creando pedidos con un cliente realcionado, los seeders de clientes ya no son necesarios)
+        
         $this->call([
             ClienteTableSeeder::class,
+            ProductoTableSeeder::class,
+            PedidoTableSeeder::class,
+            TagTableSeeder::class,
         ]);
     }
 }
