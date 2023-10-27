@@ -36,6 +36,7 @@
                     <ul>
                         @foreach ($producto->tags as $tag)
                         <li>{{$tag->nombre}}</li>
+                        @endforeach
                     </ul>
                     
                 </div>
